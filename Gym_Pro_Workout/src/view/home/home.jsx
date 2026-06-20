@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const SLIDES = [
@@ -35,8 +36,8 @@ export function Home() {
         return () => clearInterval(timer);
     }, [currentIndex]);
     return (
-        <>
-            <div className="relative w-full h-[530px] overflow-hidden bg-[#f4f4f4] font-sans">
+        <section className='w-full '>
+            <div className="relative w-full max-w-8xl h-140 overflow-hidden bg-[#f4f4f4] font-sans">
                 {SLIDES.map((slide, index) => {
                     const isActive = index === currentIndex;
 
@@ -46,7 +47,7 @@ export function Home() {
                             className={`absolute inset-0 w-full h-full flex flex-col md:flex-row items-center justify-between px-8 md:px-24 transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                                 }`}
                         >
-                            {/* Left Column: Text Content */}
+                            {/* Left Column*/}
                             <div className="relative flex-1 z-20 flex flex-col justify-center max-w-xl">
                                 {/*  background watermark text */}
                                 <div className={`absolute top-0 left-0 -translate-y-12 select-none text-[12rem] font-black text-gray-200/50 leading-none z-0 transition-all duration-1000 delay-300 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
@@ -72,12 +73,12 @@ export function Home() {
                                 <button className={`z-10 w-fit flex items-center bg-[#e52d27] text-white font-bold tracking-wider uppercase text-sm py-4 px-8 hover:bg-black transition-all duration-500 delay-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                                     }`}>
                                     {slide.buttonText}
-                                    <span className="ml-4 font-light">→</span>
+                                    <span className="ml-2 "><ArrowRight size={24}/></span>
                                 </button>
                             </div>
 
                             {/* Right Column: Image */}
-                            <div className="flex-1 h-full relative flex items-end justify-center z-10">
+                            <div className="flex-1 h-full relative flex items-end justify-center z-10 mb-14">
                                 <img
                                     src={slide.image}
                                     alt={slide.title}
@@ -102,6 +103,6 @@ export function Home() {
                     ))}
                 </div>
             </div>
-        </>
+        </section>
     )
 }
