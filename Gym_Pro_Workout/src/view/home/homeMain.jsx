@@ -7,6 +7,7 @@ import BmiCalculator from "./bmiCalculater";
 import StepsToWeightLoss from "./stepsToWeightLoss";
 import Banner from "./Banner";
 import TeamMembers from "./TeamMembers";
+import TimeTable from "./timeTable";
 
 export function HomeMain () {
     return (
@@ -17,6 +18,7 @@ export function HomeMain () {
     <TrainingPrograms/>
     <FitnessGoals/>
     <BmiCalculator/>
+    <TimeTable/>
     <TeamMembers/>
     <StepsToWeightLoss/>
     <Banner/>
