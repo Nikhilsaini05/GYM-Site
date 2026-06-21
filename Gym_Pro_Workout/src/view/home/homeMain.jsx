@@ -4,6 +4,9 @@ import MotivationalBanner from "./motivationalBanner";
 import TrainingPrograms from "./trainingPrograms";
 import FitnessGoals from "./fitnessGoals";
 import BmiCalculator from "./bmiCalculater";
+import StepsToWeightLoss from "./stepsToWeightLoss";
+import Banner from "./Banner";
+import TeamMembers from "./TeamMembers";
 
 export function HomeMain () {
     return (
@@ -14,6 +17,9 @@ export function HomeMain () {
     <TrainingPrograms/>
     <FitnessGoals/>
     <BmiCalculator/>
+    <TeamMembers/>
+    <StepsToWeightLoss/>
+    <Banner/>
     </>
 )
 }
