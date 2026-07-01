@@ -41,7 +41,7 @@ export default function Banner() {
                 </div>
 
                 {/* Brand 5: INSIDE FITNESS */}
-                <div className="flex items-center justify-center min-w-35">
+                <div className="hidden lg:block flex items-center justify-center min-w-35">
                     <span className="text-2xl font-sans font-black italic uppercase tracking-tighter leading-none flex flex-col items-center">
                         <span className="text-[10px] tracking-widest font-medium not-italic opacity-80">Inside</span>
                         Fitness

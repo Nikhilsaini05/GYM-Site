@@ -2,8 +2,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function MotivationalBanner() {
     return (
-        <section className="w-full bg-white py-20 flex justify-center items-center font-sans overflow-hidden">
-            <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 relative">
+        <section className="w-full bg-white py-20 md:px-10 flex justify-center items-center font-sans overflow-hidden">
+            <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 relative">
 
                 {/* Central Divider Line */}
                 <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-200 hidden md:block z-0" />

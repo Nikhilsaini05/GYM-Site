@@ -73,7 +73,6 @@ export default function BmiCalculator() {
 
                         {/* Table Body */}
                         {chartData.map((row, index) => {
-                            // Conditionally apply a solid red background tag highlight if matching computed state
                             const isCurrentRange = result && result.score >= row.min && result.score <= row.max;
 
                             return (

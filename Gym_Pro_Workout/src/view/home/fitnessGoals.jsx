@@ -62,7 +62,7 @@ export default function FitnessGoals() {
                             </h3>
 
                             {/* Feature Description */}
-                            <p className="text-gray-400 text-[16px] font-light text-justify leading-relaxed ">
+                            <p className="text-gray-500 text-[16px]  text-justify leading-relaxed ">
                                 {feature.desc}
                             </p> 
                         </div>

@@ -55,22 +55,22 @@ export function Navbar() {
 
     return (
         <>
-            <header className="relative w-full bg-[#404040] shadow-sm py-5 px-12 z-40">
-                <nav className="max-w-7xl mx-auto flex flex-row items-center justify-between">
+            <header className="fixed w-full bg-[#404040] shadow-sm py-2 px-4 md:px- md:py-5 lg:px-12 z-40">
+                <nav className="w-full max-w-7xl  flex flex-row items-center justify-between">
 
                     {/* Logo Section */}
                     <div className="flex items-center tracking-tight select-none">
-                        <span className="text-2xl text-[#ff4a3b] ml-1 mr-1">
-                            <BicepsFlexed size={30} />
+                        <span className="text-2xl text-[#ff4a3b] lg:ml-1 mr-1">
+                            <BicepsFlexed size={20} md:size={30} />
                         </span>
-                        <span className="text-2xl text-white font-semibold uppercase">
+                        <span className="md:text-xl lg:text-2xl text-white font-semibold uppercase">
                             Power Gym
                         </span>
                     </div>
 
                     {/* Navigation Links */}
                     <div>
-                        <ul className="flex flex-row items-center gap-8 text-sm font-extrabold uppercase tracking-wider text-white">
+                        <ul className="hidden md:flex flex-row items-center gap-4 lg:gap-8 text-sm font-extrabold uppercase tracking-wider text-white">
                             {/* HOME DROPDOWN */}
                             <DropdownContainer triggerText="Home" isOpen={isHomeOpen} setIsOpen={setIsHomeOpen}>
                                 <ul className="flex flex-col py-4">
@@ -145,13 +145,13 @@ export function Navbar() {
                     </div>
 
                     {/* Right Action Icons */}
-                    <div className="flex flex-row items-center gap-6">
+                    <div className="flex flex-row items-center gap-4 lg:gap-6">
                         <button className="text-white hover:text-[#ff4a3b] transition-colors">
-                            <Search size={24} strokeWidth={2.5} />
+                            <Search size={22} strokeWidth={2.5} />
                         </button>
 
-                        <button className="relative text-white hover:text-[#ff4a3b] transition-colors pr-1">
-                            <ShoppingCart size={24} strokeWidth={2.5} />
+                        <button className="hidden lg:block relative text-white hover:text-[#ff4a3b] transition-colors pr-1">
+                            <ShoppingCart size={22} strokeWidth={2.5} />
                             <span className="absolute -top-2 -right-2 bg-[#ff4a3b] text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center border border-white">
                                 0
                             </span>
@@ -159,8 +159,8 @@ export function Navbar() {
 
                         <button 
                             onClick={() => setIsSidebarOpen(true)}
-                            className="bg-white hover:bg-[#ff4a3b] text-[#404040] hover:text-white p-2 rounded-full transition-colors flex items-center justify-center">
-                            <Menu size={18} strokeWidth={2.5} />
+                            className="bg-white hover:bg-[#ff4a3b] text-[#404040] hover:text-white p-1 lg:p-2 rounded-full transition-colors flex items-center justify-center">
+                            <Menu size={14} strokeWidth={2.5} />
                         </button>
                     </div>
                 </nav>
@@ -175,7 +175,7 @@ export function Navbar() {
             />
             
             <aside 
-                className={`fixed top-0 right-0 z-50 h-full w-full max-w-sm sm:max-w-md bg-white p-10 md:p-14 shadow-2xl flex flex-col justify-between transition-transform duration-500 ease-in-out transform ${
+                className={`fixed top-0 right-0 z-50 h-full bg-white p-10 md:p-14 shadow-2xl flex flex-col justify-between transition-transform duration-500 ease-in-out transform ${
                     isSidebarOpen ? "translate-x-0" : "translate-x-full"
                 }`}
             >
